@@ -20,5 +20,10 @@
   "type": "module",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3"
   }
 }
