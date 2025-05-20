@@ -3,11 +3,15 @@ import { Request, Response } from "express";
 
 let tarefas : TarefaType[] = [];
 
+// GET
 export function getTarefa(req:Request, res:Response ){
+  console.log("valor de tarefas: ", tarefas)
   res.json(tarefas);
 }
 
+// POST
 export function createTarefa(req:Request, res:Response): void{
+  
   //como posso criar uma tarefa 
   //quando faço isso estou esperando que esses dados venham da requisição 
   const { titulo,  descricao} =  req.body
@@ -23,7 +27,16 @@ export function createTarefa(req:Request, res:Response): void{
   }
 
   tarefas.push(novaTarefa);
-  console.log("valor de tarefas: ", tarefas);
   //201 === criação
   res.status(201).json(novaTarefa);
+}
+
+// PUT 
+export function alterarTarefa(req: Request, res:Response){
+
+}
+
+// DELETE 
+export function deletarTarefa(req: Request, res:Response){
+
 }
