@@ -1,6 +1,7 @@
 import express from 'express';
 
 const app = express();
+
 const PORT: number = 3000;
 const arrDadosJSON = [
   {"name": "Cachorro caramelo", 
