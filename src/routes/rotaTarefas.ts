@@ -6,4 +6,4 @@ export const router = Router();
 router.get('/', getTarefa);
 router.post('/', createTarefa);
 router.put('/:id', alterarTarefa);
-router.put('/:id', deletarTarefa);
+router.delete('/:id', deletarTarefa);

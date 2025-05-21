@@ -1,5 +1,5 @@
 export type TarefaType = {
-  id: string;
+  id: number;
   titulo: string | any; 
   descricao: string | any;
   conclusao: boolean;
