@@ -6,10 +6,9 @@ let tarefas: TarefaType[] = [];
 let contadorId = 1;
 
 // GET
-export function getTarefa(req: Request, res: Response) {
+export function getTarefa(req: Request, res: Response): void  {
   res.json(tarefas);
 }
-
 
 // POST
 export function createTarefa(req: Request, res: Response): void {
@@ -33,7 +32,7 @@ export function createTarefa(req: Request, res: Response): void {
 }
 
 // PUT 
-export function alterarTarefa(req: Request, res: Response) {
+export function alterarTarefa(req: Request, res: Response): void {
   const idNumber = Number(req.params.id);
   const { titulo, descricao, conclusao } = req.body;
 
@@ -57,9 +56,8 @@ export function alterarTarefa(req: Request, res: Response) {
   }
 }
 
-
 // DELETE 
-export function deletarTarefa(req: Request, res: Response) {
+export function deletarTarefa(req: Request, res: Response): void  {
   const idNumber = Number(req.params.id);
 
   const posicaoTarefa = tarefas.findIndex((item: any) => item.id === idNumber);
